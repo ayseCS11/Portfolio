@@ -54,6 +54,17 @@ section .sub{color:var(--muted);margin:0 0 24px;max-width:700px}
 .cred ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
 .cred li{margin-bottom:3px}
 .cred code{font-size:12px;color:var(--tagt);background:var(--tag);padding:1px 6px;border-radius:6px}
+.card p.tagline{font-weight:600;color:var(--text);font-size:15.5px;margin:2px 0 6px}
+.card{position:relative}
+.card.star{border:2px solid var(--accent);box-shadow:0 0 0 4px var(--tag)}
+.ribbon{position:absolute;top:14px;right:14px;background:var(--accent);color:#fff;font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px}
+.dl{display:flex;align-items:center;gap:12px;margin:6px 0 8px;padding:10px 14px;background:var(--tag);border-radius:12px}
+.dl b{font-size:34px;line-height:1;color:var(--accent)}
+.dl span{font-size:13px;color:var(--tagt);font-weight:600;line-height:1.35}
+.stat.star{border:2px solid var(--accent)}
+.stat.star b{color:var(--accent)}
+details{margin:6px 0 4px;font-size:14.5px}
+details summary{cursor:pointer;color:var(--accent);font-weight:600}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .tag{background:var(--tag);color:var(--tagt);font-size:12px;padding:3px 9px;border-radius:999px;font-weight:600}
 .live{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.04em}
@@ -107,6 +118,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 </div>
 <div class="stats">
 <div class="stat"><b>6</b><span>Live Play Store apps</span></div>
+<div class="stat star"><b>120+</b><span>NudgeMe downloads</span></div>
 <div class="stat"><b>6+</b><span>Years of experience</span></div>
 <div class="stat"><b>2</b><span>Traffic AI research versions</span></div>
 <div class="stat"><b>20+</b><span>Certifications</span></div>
@@ -139,11 +151,13 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <p class="sub">Published on Google Play under Tekno Efsun. Every app below is live.</p>
 <div class="grid">
 <div class="card">
-<div class="icon" data-mono="SL"><img src="https://play-lh.googleusercontent.com/_XK39STNtrocC3Cc7sSE35bKtKOq5gGf19-XypV8dPz4BRmlCvs-C79S6duMeC83YesQ7qNZMkFaO7VgSEKu=w480-h960-rw" alt="SachLens" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"> </div>
-<span class="live">LIVE ON GOOGLE PLAY</span>
+<div class="icon" data-mono="SL"><img src="https://play-lh.googleusercontent.com/_XK39STNtrocC3Cc7sSE35bKtKOq5gGf19-XypV8dPz4BRmlCvs-C79S6duMeC83YesQ7qNZMkFaO7VgSEKu=w480-h960-rw" alt="SachLens logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
+<span class="live">LIVE ON GOOGLE PLAY | AI TOOL</span>
 <h3>SachLens: AI Inspector</h3>
-<p>A fake document and AI image checker that runs entirely on device. No backend, no uploads, and files are never stored or sent anywhere. Built for the NYLP AI Hackathon 2026.</p>
-  <h3>WHAT SACHLENS CHECKS</h3>
+<p class="tagline">Check if a document, image, or link is fake, privately on your phone.</p>
+<p>Runs entirely on device. No backend, no uploads, and files are never stored or sent anywhere. Built for the NYLP AI Hackathon 2026.</p>
+<details>
+<summary>See everything SachLens checks</summary>
 <ul>
 <li>🚨 Scam posters: upfront fees, guaranteed visas, unusually high daily pay, wallet or crypto payments, lottery and investment promises</li>
 <li>📄 Offer letters and certificates: impossible dates, payments confirmed after the letter date, and impossible scores</li>
@@ -155,26 +169,15 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <li>📁 Batch analysis: check up to 20 files at once</li>
 <li>📑 Exportable PDF analysis reports</li>
 </ul>
-<div class="tags">
-<span class="tag">AI Image Detection</span>
-<span class="tag">Document Verification</span>
-<span class="tag">Scam Detection</span>
-<span class="tag">QR & Link Safety</span>
-<span class="tag">Metadata Analysis</span>
-<span class="tag">Error Level Analysis</span>
-<span class="tag">Batch Processing</span>
-<span class="tag">PDF Reports</span>
-<span class="tag">Privacy Focused</span>
-<span class="tag">On-Device Analysis</span>
-</div>
-
-<div class="tags"><span class="tag">Flutter</span><span class="tag">On device ML</span><span class="tag">Serverless</span><span class="tag">Privacy first</span></div>
+</details>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">On device ML</span><span class="tag">Serverless</span><span class="tag">Privacy first</span><span class="tag">AI Image Detection</span><span class="tag">Document Verification</span><span class="tag">Scam Detection</span><span class="tag">QR and Link Safety</span><span class="tag">Metadata Analysis</span><span class="tag">Error Level Analysis</span><span class="tag">Batch Processing</span><span class="tag">PDF Reports</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.sachlens" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
 <div class="card">
 <div class="icon" data-mono="GA"><img src="https://play-lh.googleusercontent.com/L0rmPGULJiYz3DOrAVNGeQnHdKLNlk8o2jRKViks5wb4d2H86T4SGhtDeNAqycyoZRu7VKQ1DntN09oD35VShQ=s128" alt="Grand Asian University Sialkot logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
-<span class="live">LIVE ON GOOGLE PLAY</span>
+<span class="live">LIVE ON GOOGLE PLAY | EDUCATION</span>
 <h3>Grand Asian University Sialkot: GAUS Feedback System</h3>
+<p class="tagline">Visitor kiosk and admin dashboard for the university admission office.</p>
 <p>The official visitor management and feedback platform for the university, with a public kiosk and a secure admin dashboard.</p>
 <ul><li>Categorized admission query forms, staff feedback ratings, and issue reporting with urgency classification</li><li>Token based submission tracking and search</li><li>Offline support with local storage and automatic sync when connectivity returns</li><li>Admin analytics and exportable PDF reports</li></ul>
 <div class="tags"><span class="tag">Flutter</span><span class="tag">Offline first</span><span class="tag">Kiosk UI</span><span class="tag">Admin dashboard</span><span class="tag">PDF reports</span></div>
@@ -182,26 +185,31 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 </div>
 <div class="card">
 <div class="icon" data-mono="MA"><img src="https://play-lh.googleusercontent.com/1O7fVbvWPiyLbYVyi8sIbUhMyI-xTUcoChxYC0UY8Gph22DvMmss7P0hAQE6KzwltUDyFTt0KGJYnbbqvNrGlg=s128" alt="Mindora AI logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
-<span class="live">LIVE ON GOOGLE PLAY</span>
+<span class="live">LIVE ON GOOGLE PLAY | HEALTH AND WELLNESS</span>
 <h3>Mindora AI: Mood Track and Chat</h3>
+<p class="tagline">Your AI companion for mood, stress, and daily habits.</p>
 <p>An AI mental wellness companion that combines conversational support, mood tracking, and a persistent nudge system.</p>
 <ul><li>AI chat with multilingual support</li><li>Mood logging with weekly and monthly charts</li><li>CBT exercises (breathing, grounding, gratitude), streaks, and reminders</li><li>Private by design: data encrypted in transit and not sold</li></ul>
 <div class="tags"><span class="tag">Flutter</span><span class="tag">AI chat</span><span class="tag">Charts</span><span class="tag">Notifications</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.mindora" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
-<div class="card">
+<div class="card star">
+<span class="ribbon">120+ downloads</span>
 <div class="icon" data-mono="NM"><img src="https://play-lh.googleusercontent.com/4L2Pa-M5PNehD8999tR7Tqyi8zCPssWfzraqRfgxNb-OyHH71II9VJbZLXiRfqCC8jxzbrr9ZHChD8QeCloavQ=s128" alt="NudgeMe logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
-<span class="live">LIVE ON GOOGLE PLAY</span>
+<span class="live">LIVE ON GOOGLE PLAY | PRODUCTIVITY</span>
 <h3>NudgeMe: Smart Daily Reminder</h3>
-<p>An anti procrastination app with smart notifications, task scheduling, and habit tracking. Rated 5.0 on Google Play with 100+ downloads.</p>
+<p class="tagline">Smart reminders and daily nudges that keep you on track.</p>
+<div class="dl"><b>120+</b><span>downloads on Google Play<br>Rated 5.0 by its users</span></div>
+<p>An anti procrastination app with smart notifications, task scheduling, and habit tracking, built to help you finish what you start.</p>
 
 <div class="tags"><span class="tag">Flutter</span><span class="tag">Notifications</span><span class="tag">Scheduling</span><span class="tag">Habit tracking</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.nudge.nudge" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
 <div class="card">
 <div class="icon" data-mono="QR"><img src="https://play-lh.googleusercontent.com/wAzF4_DN9hbb6j_k1jZr61X5fWcJ90Ry40BqKyqZi4zz6Ww3uo6EFZWoP_NUH90upeCbRO10rZ-gJxoi4XuXSQ=s128" alt="QR Code Scan and Generate logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
-<span class="live">LIVE ON GOOGLE PLAY</span>
+<span class="live">LIVE ON GOOGLE PLAY | TOOLS</span>
 <h3>QR Code Scan and Generate: Safe</h3>
+<p class="tagline">Scan and create QR codes and barcodes, safely and offline.</p>
 <p>A fast, ad safe QR and barcode toolkit rated 5.0 on Google Play.</p>
 <ul><li>Instant decoding with Google ML Kit across 14 formats, including QR, EAN, UPC, Code 128, Data Matrix, and Aztec</li><li>Security alerts that check URLs for phishing and suspicious patterns before opening</li><li>Scan history with search, favorites, and CSV export</li><li>QR generator for URL, WiFi, contact, email, phone, and text; works offline with no account</li></ul>
 <div class="tags"><span class="tag">Flutter</span><span class="tag">Google ML Kit</span><span class="tag">Security checks</span><span class="tag">Offline</span></div>
@@ -209,8 +217,9 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 </div>
 <div class="card">
 <div class="icon" data-mono="DQ"><img src="https://play-lh.googleusercontent.com/MdlEbJraFstfjM-g_n2KUKSKovMoCKP_7jDvvUh-Vt9fpDTaoJBrcvx-rIY6HvAzEh5J6IBflv-RX_0N1rctVKY=s128" alt="DiziQuote logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
-<span class="live">LIVE ON GOOGLE PLAY</span>
+<span class="live">LIVE ON GOOGLE PLAY | LIFESTYLE</span>
 <h3>DiziQuote: En Güzel Sözleri</h3>
+<p class="tagline">Read famous Turkish drama quotes in English, Turkish, Urdu, and Arabic.</p>
 <p>A Turkish drama quotes app with a 5,000+ quote library, rated 5.0 on Google Play.</p>
 <ul><li>Full app localization in English, Turkish, Urdu, and Arabic with instant switching, no restart</li><li>Favorites, one tap sharing, and light and dark themes</li><li>Lightweight and optimized for low storage use</li></ul>
 <div class="tags"><span class="tag">Flutter</span><span class="tag">i18n</span><span class="tag">Localization</span><span class="tag">Dark mode</span></div>
@@ -273,7 +282,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <div class="card"><h3>NutriVerse</h3><p>An AI nutrition platform built with Flutter and Firebase.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">AI</span></div></div>
 <div class="card"><h3>Remote Academic Management System</h3><p>A full stack system with role based authentication, student and project management, and reporting modules, built with PHP, MySQL, HTML, CSS, and JavaScript.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div></div>
 <div class="card"><h3>Custom LMS and Ecommerce Platforms</h3><p>Full stack platforms with authentication, admin dashboards, and content management, built with PHP, WordPress, and MySQL.</p><div class="tags"><span class="tag">PHP</span><span class="tag">WordPress</span><span class="tag">MySQL</span></div></div>
-<div class="card"><h3>Allah Tawaqal Metals ( Company Website )/h3><p>A professional website delivered for a private company, live at atmetalsltd.com.</p><div class="links"><a href="https://atmetalsltd.com" target="_blank" rel="noopener">Visit the site</a></div></div>
+<div class="card"><h3>Allah Tawaqal Metals (Company Website)</h3><p>A professional website delivered for a private company, live at atmetalsltd.com.</p><div class="links"><a href="https://atmetalsltd.com" target="_blank" rel="noopener">Visit the site</a></div></div>
 </div>
 </section>
 
