@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayesha Arshad | Flutter Developer and Full Stack Engineer</title>
+<meta name="description" content="Portfolio of Ayesha Arshad: Flutter developer, full stack engineer, and founder of Tekno Efsun. Published Play Store apps, EmergiScan, and AI research projects.">
+<meta property="og:title" content="Ayesha Arshad | Flutter Developer and Full Stack Engineer">
+<meta property="og:description" content="Published Flutter apps, a healthcare emergency platform, and AI traffic research.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%B1%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f6f8fb;--card:#ffffff;--text:#16202e;--muted:#5a6678;--line:#e1e7ef;--accent:#0f766e;--accent2:#1f3a5f;--tag:#e6f4f2;--tagt:#0b5c55}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1420;--card:#161e2d;--text:#e8edf5;--muted:#9aa7bb;--line:#26324a;--accent:#2dd4bf;--accent2:#8fb4e8;--tag:#12302f;--tagt:#7ee7da}}
+:root[data-theme="dark"]{--bg:#0e1420;--card:#161e2d;--text:#e8edf5;--muted:#9aa7bb;--line:#26324a;--accent:#2dd4bf;--accent2:#8fb4e8;--tag:#12302f;--tagt:#7ee7da}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:var(--card);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;max-width:1040px;margin:0 auto;flex-wrap:wrap}
+.logo{font-weight:700;color:var(--accent2)}
+nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0;flex-wrap:wrap;font-size:14px}
+nav ul a{color:var(--muted)}
+nav ul a:hover{color:var(--accent);text-decoration:none}
+#theme{border:1px solid var(--line);background:var(--bg);color:var(--text);border-radius:8px;padding:4px 10px;cursor:pointer;font-size:13px}
+.hero{padding:64px 0 40px}
+.hero .hi{color:var(--accent);font-weight:600;margin:0}
+.hero h1{font-size:clamp(34px,6vw,56px);line-height:1.1;margin:6px 0 12px;color:var(--accent2)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:680px;margin:0 0 22px}
+.btns{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff}
+.btn:hover{text-decoration:none;opacity:.9}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:34px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:26px;color:var(--accent2)}
+.stat span{color:var(--muted);font-size:13px}
+section{padding:46px 0}
+section h2{font-size:28px;margin:0 0 6px;color:var(--accent2)}
+section .sub{color:var(--muted);margin:0 0 24px;max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column}
+.card h3{margin:0 0 4px;font-size:18px}
+.card p{margin:8px 0;color:var(--muted);font-size:15px}
+.card ul{margin:6px 0 10px;padding-left:18px;color:var(--muted);font-size:14.5px}
+.icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:24px;margin-bottom:10px;background:var(--tag)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.tag{background:var(--tag);color:var(--tagt);font-size:12px;padding:3px 9px;border-radius:999px;font-weight:600}
+.live{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.04em}
+.card .links{margin-top:auto;padding-top:8px;display:flex;gap:14px;flex-wrap:wrap;font-weight:600;font-size:14px}
+.feature{display:grid;grid-template-columns:1fr;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px}
+.feature h3{margin:0 0 4px;font-size:24px}
+.feature ul{color:var(--muted);padding-left:20px}
+.quote{font-style:italic;color:var(--accent);font-weight:600}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.timeline{border-left:2px solid var(--line);margin-left:6px;padding-left:20px}
+.tl{position:relative;margin-bottom:22px}
+.tl::before{content:"";position:absolute;left:-27px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl b{display:block}
+.tl small{color:var(--muted)}
+.tl p{margin:4px 0 0;color:var(--muted);font-size:15px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.skills h4{margin:0 0 6px;color:var(--accent2)}
+.cert{columns:2 280px;column-gap:24px;color:var(--muted);font-size:14.5px;padding-left:18px}
+.cert li{margin-bottom:4px;break-inside:avoid}
+footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:var(--muted);font-size:14px}
+.contact{display:flex;gap:12px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<span class="logo">Ayesha Arshad</span>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#apps">Apps</a></li>
+<li><a href="#emergiscan">EmergiScan</a></li>
+<li><a href="#research">AI Research</a></li>
+<li><a href="#more">More Work</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
+</nav>
+</header>
+
+<main class="wrap">
+<div class="hero" id="top">
+<p class="hi">Hello, I am</p>
+<h1>Ayesha Arshad</h1>
+<p class="lead">Flutter developer and full stack engineer with 6+ years of experience. I build and publish mobile apps, web platforms, and AI powered tools, and I lead Tekno Efsun, a registered tech startup based in Sialkot, Pakistan.</p>
+<div class="btns">
+<a class="btn primary" href="#apps">See my apps</a>
+<a class="btn" href="https://play.google.com/store/apps/dev?id=7748182712237657139" target="_blank" rel="noopener">Play Store profile</a>
+<a class="btn" href="#contact">Get in touch</a>
+</div>
+<div class="stats">
+<div class="stat"><b>6</b><span>Live Play Store apps</span></div>
+<div class="stat"><b>6+</b><span>Years of experience</span></div>
+<div class="stat"><b>2</b><span>Traffic AI research versions</span></div>
+<div class="stat"><b>20+</b><span>Certifications</span></div>
+</div>
+</div>
+
+<section id="about">
+<h2>About me</h2>
+<p class="sub">From teaching software engineering to shipping my own products.</p>
+<div class="two">
+<div class="card">
+<p>I hold a BS in Computer Science (CGPA 3.37 out of 4.00) from Government College Women University Sialkot. I work across the full product lifecycle: requirements, UI and UX design, implementation, testing, CI/CD, and production deployment.</p>
+<p>My focus is Flutter and Dart with Firebase backends, state management using Provider and Bloc, RESTful APIs, app localization, and performance optimization. I also use AI assisted workflows such as GitHub Copilot and Claude.</p>
+</div>
+<div class="card">
+<p><b>Highlights</b></p>
+<ul>
+<li>Founder and Technical Lead of Tekno Efsun, a registered startup</li>
+<li>Executive Secretary to the Pro Vice Chancellor, Grand Asian University Sialkot</li>
+<li>First Microsoft Learn Student Ambassador from GCWUS and the Sialkot region, promoted to Beta MLSA</li>
+<li>Awarded a laptop and scholarship by HEC for academic excellence</li>
+<li>Delivered projects for international clients, including UK based universities such as LSBU</li>
+</ul>
+</div>
+</div>
+</section>
+
+<section id="apps">
+<h2>Live Flutter apps</h2>
+<p class="sub">Published on Google Play under Tekno Efsun. Every app below is live.</p>
+<div class="grid">
+
+<div class="card">
+<div class="icon">🔍</div>
+<span class="live">LIVE ON GOOGLE PLAY</span>
+<h3>SachLens: AI Inspector</h3>
+<p>A fake document and AI image checker that runs entirely on your device. No backend, no uploads, and your files are never stored or sent anywhere. Built for the NYLP AI Hackathon 2026.</p>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">On device AI</span><span class="tag">Serverless</span><span class="tag">Privacy first</span></div>
+<div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.sachlens" target="_blank" rel="noopener">Get it on Google Play</a></div>
+</div>
+
+<div class="card">
+<div class="icon">🎓</div>
+<span class="live">LIVE ON GOOGLE PLAY</span>
+<h3>Grand Asian University Sialkot</h3>
+<p>The mobile app for Grand Asian University Sialkot, built with Flutter.</p>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">University app</span></div>
+<div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.gaus" target="_blank" rel="noopener">Get it on Google Play</a></div>
+</div>
+
+<div class="card">
+<div class="icon">🧠</div>
+<span class="live">LIVE ON GOOGLE PLAY</span>
+<h3>Mindora AI: Mood Track and Chat</h3>
+<p>An AI integrated mental wellness companion with mood tracking and guided support, designed around accessibility, clean UX, and a scalable architecture.</p>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">AI chat</span><span class="tag">Mood tracking</span></div>
+<div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.mindora" target="_blank" rel="noopener">Get it on Google Play</a></div>
+</div>
+
+<div class="card">
+<div class="icon">⏰</div>
+<span class="live">LIVE ON GOOGLE PLAY</span>
+<h3>NudgeMe: Smart Daily Reminder</h3>
+<p>An anti procrastination app with smart notifications, task scheduling, and habit tracking. Rated 5.0 on Google Play with 100+ downloads.</p>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">Notifications</span><span class="tag">Habit tracking</span></div>
+<div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.nudge.nudge" target="_blank" rel="noopener">Get it on Google Play</a></div>
+</div>
+
+<div class="card">
+<div class="icon">📷</div>
+<span class="live">LIVE ON GOOGLE PLAY</span>
+<h3>QR Code Scan and Generate: Safe</h3>
+<p>A fast, lightweight QR scanner and generator with real time scanning and scan history, optimized for a minimal footprint on Android. Rated 5.0 on Google Play.</p>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">Real time scanning</span><span class="tag">Lightweight</span></div>
+<div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.qr" target="_blank" rel="noopener">Get it on Google Play</a></div>
+</div>
+
+<div class="card">
+<div class="icon">🎬</div>
+<span class="live">LIVE ON GOOGLE PLAY</span>
+<h3>DiziQuote: En Güzel Sözleri</h3>
+<p>A multilingual quotes hub with 5,000+ quotes from famous series, Google Sign In, app localization, and a modern responsive interface. Rated 5.0 on Google Play.</p>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">i18n</span><span class="tag">Google Sign In</span></div>
+<div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.ayesha" target="_blank" rel="noopener">Get it on Google Play</a></div>
+</div>
+
+</div>
+</section>
+
+<section id="emergiscan">
+<h2>EmergiScan</h2>
+<p class="sub">A web based healthcare platform built for emergencies.</p>
+<div class="feature">
+<div>
+<span class="live">LIVE WEB APPLICATION</span>
+<h3>EmergiScan: Healthcare Emergency Platform</h3>
+<p class="quote">Seconds Shouldn't Cost a Life.</p>
+<p style="color:var(--muted)">EmergiScan is a healthcare web application that I designed, built, and deployed to production on Railway. It gives users a secure sign in and a dashboard for managing their healthcare workflow, with a clear focus on speed when every second matters.</p>
+<ul>
+<li>Secure login and a dedicated healthcare dashboard</li>
+<li>Deployed end to end on Railway, from development to live hosting</li>
+</ul>
+<div class="tags"><span class="tag">Web application</span><span class="tag">Healthcare</span><span class="tag">Authentication</span><span class="tag">Railway</span></div>
+<div class="btns" style="margin-top:12px"><a class="btn primary" href="https://emergiscan-production.up.railway.app/" target="_blank" rel="noopener">Open EmergiScan</a></div>
+</div>
+</div>
+</section>
+
+<section id="research">
+<h2>AI research</h2>
+<p class="sub">Simulation based research using computer vision and deep reinforcement learning.</p>
+<div class="two">
+<div class="card">
+<h3>Automatic Traffic Lights Control System (ATLCS I)</h3>
+<p>My final year research project at GCWUS. It optimizes traffic signal timing so vehicles wait less at intersections.</p>
+<ul>
+<li>YOLOv4 trained on 97 images across 6 vehicle classes, reaching an mAP of 0.53549</li>
+<li>A DQN reinforcement learning agent trained in the SUMO traffic simulator over 100 episodes</li>
+<li>Average waiting time of 0.32 seconds and average queue length of 52.51 vehicles</li>
+<li>Outperformed the FCMQN+MP, FLC, and OATS baselines</li>
+</ul>
+<div class="tags"><span class="tag">YOLOv4</span><span class="tag">DQN</span><span class="tag">SUMO</span><span class="tag">Python</span></div>
+</div>
+<div class="card">
+<h3>Automatic Traffic Lights Control System (ATLCS II)</h3>
+<p>An improved second version, delivered for a UK based academic client at LSBU.</p>
+<ul>
+<li>Built on the original system with intelligent traffic flow optimization logic</li>
+<li>Delivered as a second version for a UK based academic client</li>
+</ul>
+<div class="tags"><span class="tag">Deep reinforcement learning</span><span class="tag">Computer vision</span><span class="tag">Client delivery</span></div>
+</div>
+</div>
+</section>
+
+<section id="more">
+<h2>More work</h2>
+<p class="sub">Institutional systems, client projects, and products in the works.</p>
+<div class="grid">
+<div class="card"><h3>GAU Admission Feedback System</h3><p>A Flutter kiosk app with an admin dashboard for collecting and reviewing feedback at the university admission office.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Admin dashboard</span></div></div>
+<div class="card"><h3>University Phone Directory</h3><p>A telephone directory management system for the reception desk, built with Flutter and Firebase.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div></div>
+<div class="card"><h3>NutriVerse</h3><p>An AI nutrition platform built with Flutter and Firebase.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">AI</span></div></div>
+<div class="card"><h3>Remote Academic Management System</h3><p>A full stack system with role based authentication, student and project management, and reporting modules, built with PHP, MySQL, HTML, CSS, and JavaScript.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div></div>
+<div class="card"><h3>Custom LMS and Ecommerce Platforms</h3><p>Full stack platforms with authentication, admin dashboards, and content management, built with PHP, WordPress, and MySQL.</p><div class="tags"><span class="tag">PHP</span><span class="tag">WordPress</span><span class="tag">MySQL</span></div></div>
+<div class="card"><h3>Company Website</h3><p>A professional website delivered for a private company, live at atmetalsltd.com.</p><div class="links"><a href="https://atmetalsltd.com" target="_blank" rel="noopener">Visit the site</a></div></div>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<p class="sub">&nbsp;</p>
+<div class="timeline">
+<div class="tl"><b>Executive Secretary to Pro Vice Chancellor</b><small>Grand Asian University Sialkot | Nov 2025 to Present</small><p>Official correspondence, documentation, administrative coordination, scheduling, and reporting.</p></div>
+<div class="tl"><b>Founder and Technical Lead</b><small>Tekno Efsun | 2025 to Present</small><p>Architecting and leading all internal and client facing Flutter and web platforms, from stack selection to deployment.</p></div>
+<div class="tl"><b>Software Engineering Instructor and Technical Mentor</b><small>Nisa Girls College | Oct 2022 to Jun 2025</small><p>Taught software engineering, full stack development, and mobile app architecture, and mentored student projects.</p></div>
+<div class="tl"><b>Freelance Software Engineer</b><small>Remote | 2021 to 2024</small><p>Full stack web and mobile projects for international clients, including UK based universities.</p></div>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<p class="sub">&nbsp;</p>
+<div class="skills">
+<div class="card"><h4>Mobile</h4><div class="tags"><span class="tag">Flutter</span><span class="tag">Dart</span><span class="tag">Android</span><span class="tag">iOS</span><span class="tag">Provider</span><span class="tag">Bloc</span></div></div>
+<div class="card"><h4>Backend and data</h4><div class="tags"><span class="tag">Firebase</span><span class="tag">MySQL</span><span class="tag">PHP</span><span class="tag">REST APIs</span><span class="tag">Supabase</span></div></div>
+<div class="card"><h4>AI and ML</h4><div class="tags"><span class="tag">Python</span><span class="tag">YOLOv4</span><span class="tag">DQN</span><span class="tag">LLM API integration</span></div></div>
+<div class="card"><h4>Tools</h4><div class="tags"><span class="tag">Git and GitHub</span><span class="tag">CI/CD</span><span class="tag">VS Code</span><span class="tag">GitHub Copilot</span><span class="tag">Claude</span></div></div>
+<div class="card"><h4>Languages</h4><div class="tags"><span class="tag">Dart</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">C and C++</span></div></div>
+<div class="card"><h4>Spoken</h4><div class="tags"><span class="tag">English</span><span class="tag">Urdu</span><span class="tag">Türkçe</span></div></div>
+</div>
+<h3 style="margin:30px 0 10px;color:var(--accent2)">Certifications</h3>
+<ul class="cert">
+<li>Google IT Support Professional Specialization, Google</li>
+<li>Technical Support Fundamentals, Google</li>
+<li>The Bits and Bytes of Computer Networking, Google</li>
+<li>Operating Systems and You, Google</li>
+<li>System Administration and IT Infrastructure Services, Google</li>
+<li>IT Security: Defense Against the Digital Dark Arts, Google</li>
+<li>Introduction to Cybersecurity Tools and Cyber Attacks, IBM</li>
+<li>Cybersecurity Essentials, DefensityOne</li>
+<li>Cyber Threats and Attack Vectors, University of Colorado</li>
+<li>Cybersecurity and the Internet of Things, University System of Georgia</li>
+<li>AI For Everyone, DeepLearning.AI</li>
+<li>Machine Learning for All, University of London</li>
+<li>Python Basics, University of Michigan</li>
+<li>Microsoft Office Specialist: Word and PowerPoint 2013</li>
+<li>Azure Fundamentals, Microsoft Learn Student Ambassador Program</li>
+<li>The Fundamentals of Digital Marketing, Google</li>
+<li>Freelancing and Graphic Design, DigiSkills.pk</li>
+</ul>
+</section>
+
+<section id="contact">
+<h2>Let's work together</h2>
+<p class="sub">Open to Flutter, full stack, and AI projects, and to new opportunities.</p>
+<div class="contact">
+<a class="btn primary" href="mailto:ayeshaarshad2899@gmail.com">ayeshaarshad2899@gmail.com</a>
+<a class="btn" href="https://linkedin.com/in/aysecs11" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/aysecs11" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://play.google.com/store/apps/dev?id=7748182712237657139" target="_blank" rel="noopener">Google Play</a>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">&copy; <span id="yr">2026</span> Ayesha Arshad. Sialkot, Pakistan.</div>
+</footer>
+
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+var root = document.documentElement;
+try { var saved = localStorage.getItem("theme"); if (saved) root.setAttribute("data-theme", saved); } catch (e) {}
+document.getElementById("theme").addEventListener("click", function () {
+  var dark = root.getAttribute("data-theme") === "dark" ||
+    (!root.getAttribute("data-theme") && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  var next = dark ? "light" : "dark";
+  root.setAttribute("data-theme", next);
+  try { localStorage.setItem("theme", next); } catch (e) {}
+});
+</script>
+</body>
+</html>
