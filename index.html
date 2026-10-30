@@ -46,7 +46,14 @@ section .sub{color:var(--muted);margin:0 0 24px;max-width:700px}
 .card h3{margin:0 0 4px;font-size:18px}
 .card p{margin:8px 0;color:var(--muted);font-size:15px}
 .card ul{margin:6px 0 10px;padding-left:18px;color:var(--muted);font-size:14.5px}
-.icon{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-size:24px;margin-bottom:10px;background:var(--tag)}
+.icon{width:60px;height:60px;border-radius:14px;display:grid;place-items:center;margin-bottom:10px;background:var(--tag);overflow:hidden;font-weight:800;color:var(--tagt);font-size:20px}
+.icon img{width:100%;height:100%;object-fit:cover;display:block}
+.icon.nologo::after{content:attr(data-mono)}
+.cred h3{margin:0 0 2px;font-size:17px}
+.cred .meta{color:var(--muted);font-size:13px;margin:0 0 8px}
+.cred ul{margin:6px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+.cred li{margin-bottom:3px}
+.cred code{font-size:12px;color:var(--tagt);background:var(--tag);padding:1px 6px;border-radius:6px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .tag{background:var(--tag);color:var(--tagt);font-size:12px;padding:3px 9px;border-radius:999px;font-weight:600}
 .live{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.04em}
@@ -81,6 +88,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <li><a href="#research">AI Research</a></li>
 <li><a href="#more">More Work</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#credentials">Credentials</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 <button id="theme" type="button" aria-label="Toggle light or dark theme">Theme</button>
@@ -91,7 +99,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <div class="hero" id="top">
 <p class="hi">Hello, I am</p>
 <h1>Ayesha Arshad</h1>
-<p class="lead">Flutter developer and full stack engineer with 6+ years of experience. I build and publish mobile apps, web platforms, and AI powered tools, and I lead Tekno Efsun, a registered tech startup based in Sialkot, Pakistan.</p>
+<p class="lead">Flutter and Dart engineer who architects and ships production mobile and full stack systems. My work spans Provider and Bloc state management, offline first sync, REST integrations, Firebase backends, and on device ML, with six apps live on Google Play and applied research in YOLOv4 and deep reinforcement learning. Founder and Technical Lead at Tekno Efsun.</p>
 <div class="btns">
 <a class="btn primary" href="#apps">See my apps</a>
 <a class="btn" href="https://play.google.com/store/apps/dev?id=7748182712237657139" target="_blank" rel="noopener">Play Store profile</a>
@@ -130,61 +138,60 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <h2>Live Flutter apps</h2>
 <p class="sub">Published on Google Play under Tekno Efsun. Every app below is live.</p>
 <div class="grid">
-
 <div class="card">
-<div class="icon">🔍</div>
+<div class="icon nologo" data-mono="SL"></div>
 <span class="live">LIVE ON GOOGLE PLAY</span>
 <h3>SachLens: AI Inspector</h3>
-<p>A fake document and AI image checker that runs entirely on your device. No backend, no uploads, and your files are never stored or sent anywhere. Built for the NYLP AI Hackathon 2026.</p>
-<div class="tags"><span class="tag">Flutter</span><span class="tag">On device AI</span><span class="tag">Serverless</span><span class="tag">Privacy first</span></div>
+<p>A fake document and AI image checker that runs entirely on device. No backend, no uploads, and files are never stored or sent anywhere. Built for the NYLP AI Hackathon 2026.</p>
+
+<div class="tags"><span class="tag">Flutter</span><span class="tag">On device ML</span><span class="tag">Serverless</span><span class="tag">Privacy first</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.sachlens" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
-
 <div class="card">
-<div class="icon">🎓</div>
+<div class="icon" data-mono="GA"><img src="https://play-lh.googleusercontent.com/L0rmPGULJiYz3DOrAVNGeQnHdKLNlk8o2jRKViks5wb4d2H86T4SGhtDeNAqycyoZRu7VKQ1DntN09oD35VShQ=s128" alt="Grand Asian University Sialkot logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
 <span class="live">LIVE ON GOOGLE PLAY</span>
-<h3>Grand Asian University Sialkot</h3>
-<p>The mobile app for Grand Asian University Sialkot, built with Flutter.</p>
-<div class="tags"><span class="tag">Flutter</span><span class="tag">University app</span></div>
+<h3>Grand Asian University Sialkot: GAUS Feedback System</h3>
+<p>The official visitor management and feedback platform for the university, with a public kiosk and a secure admin dashboard.</p>
+<ul><li>Categorized admission query forms, staff feedback ratings, and issue reporting with urgency classification</li><li>Token based submission tracking and search</li><li>Offline support with local storage and automatic sync when connectivity returns</li><li>Admin analytics and exportable PDF reports</li></ul>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">Offline first</span><span class="tag">Kiosk UI</span><span class="tag">Admin dashboard</span><span class="tag">PDF reports</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.gaus" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
-
 <div class="card">
-<div class="icon">🧠</div>
+<div class="icon" data-mono="MA"><img src="https://play-lh.googleusercontent.com/1O7fVbvWPiyLbYVyi8sIbUhMyI-xTUcoChxYC0UY8Gph22DvMmss7P0hAQE6KzwltUDyFTt0KGJYnbbqvNrGlg=s128" alt="Mindora AI logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
 <span class="live">LIVE ON GOOGLE PLAY</span>
 <h3>Mindora AI: Mood Track and Chat</h3>
-<p>An AI integrated mental wellness companion with mood tracking and guided support, designed around accessibility, clean UX, and a scalable architecture.</p>
-<div class="tags"><span class="tag">Flutter</span><span class="tag">AI chat</span><span class="tag">Mood tracking</span></div>
+<p>An AI mental wellness companion that combines conversational support, mood tracking, and a persistent nudge system.</p>
+<ul><li>AI chat with multilingual support</li><li>Mood logging with weekly and monthly charts</li><li>CBT exercises (breathing, grounding, gratitude), streaks, and reminders</li><li>Private by design: data encrypted in transit and not sold</li></ul>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">AI chat</span><span class="tag">Charts</span><span class="tag">Notifications</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.mindora" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
-
 <div class="card">
-<div class="icon">⏰</div>
+<div class="icon" data-mono="NM"><img src="https://play-lh.googleusercontent.com/4L2Pa-M5PNehD8999tR7Tqyi8zCPssWfzraqRfgxNb-OyHH71II9VJbZLXiRfqCC8jxzbrr9ZHChD8QeCloavQ=s128" alt="NudgeMe logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
 <span class="live">LIVE ON GOOGLE PLAY</span>
 <h3>NudgeMe: Smart Daily Reminder</h3>
 <p>An anti procrastination app with smart notifications, task scheduling, and habit tracking. Rated 5.0 on Google Play with 100+ downloads.</p>
-<div class="tags"><span class="tag">Flutter</span><span class="tag">Notifications</span><span class="tag">Habit tracking</span></div>
+
+<div class="tags"><span class="tag">Flutter</span><span class="tag">Notifications</span><span class="tag">Scheduling</span><span class="tag">Habit tracking</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.nudge.nudge" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
-
 <div class="card">
-<div class="icon">📷</div>
+<div class="icon" data-mono="QR"><img src="https://play-lh.googleusercontent.com/wAzF4_DN9hbb6j_k1jZr61X5fWcJ90Ry40BqKyqZi4zz6Ww3uo6EFZWoP_NUH90upeCbRO10rZ-gJxoi4XuXSQ=s128" alt="QR Code Scan and Generate logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
 <span class="live">LIVE ON GOOGLE PLAY</span>
 <h3>QR Code Scan and Generate: Safe</h3>
-<p>A fast, lightweight QR scanner and generator with real time scanning and scan history, optimized for a minimal footprint on Android. Rated 5.0 on Google Play.</p>
-<div class="tags"><span class="tag">Flutter</span><span class="tag">Real time scanning</span><span class="tag">Lightweight</span></div>
+<p>A fast, ad safe QR and barcode toolkit rated 5.0 on Google Play.</p>
+<ul><li>Instant decoding with Google ML Kit across 14 formats, including QR, EAN, UPC, Code 128, Data Matrix, and Aztec</li><li>Security alerts that check URLs for phishing and suspicious patterns before opening</li><li>Scan history with search, favorites, and CSV export</li><li>QR generator for URL, WiFi, contact, email, phone, and text; works offline with no account</li></ul>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">Google ML Kit</span><span class="tag">Security checks</span><span class="tag">Offline</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.qr" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
-
 <div class="card">
-<div class="icon">🎬</div>
+<div class="icon" data-mono="DQ"><img src="https://play-lh.googleusercontent.com/MdlEbJraFstfjM-g_n2KUKSKovMoCKP_7jDvvUh-Vt9fpDTaoJBrcvx-rIY6HvAzEh5J6IBflv-RX_0N1rctVKY=s128" alt="DiziQuote logo" loading="lazy" onerror="this.parentNode.classList.add('nologo');this.remove()"></div>
 <span class="live">LIVE ON GOOGLE PLAY</span>
 <h3>DiziQuote: En Güzel Sözleri</h3>
-<p>A multilingual quotes hub with 5,000+ quotes from famous series, Google Sign In, app localization, and a modern responsive interface. Rated 5.0 on Google Play.</p>
-<div class="tags"><span class="tag">Flutter</span><span class="tag">i18n</span><span class="tag">Google Sign In</span></div>
+<p>A Turkish drama quotes app with a 5,000+ quote library, rated 5.0 on Google Play.</p>
+<ul><li>Full app localization in English, Turkish, Urdu, and Arabic with instant switching, no restart</li><li>Favorites, one tap sharing, and light and dark themes</li><li>Lightweight and optimized for low storage use</li></ul>
+<div class="tags"><span class="tag">Flutter</span><span class="tag">i18n</span><span class="tag">Localization</span><span class="tag">Dark mode</span></div>
 <div class="links"><a href="https://play.google.com/store/apps/details?id=com.teknoefsun.ayesha" target="_blank" rel="noopener">Get it on Google Play</a></div>
 </div>
-
 </div>
 </section>
 
@@ -238,12 +245,11 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <h2>More work</h2>
 <p class="sub">Institutional systems, client projects, and products in the works.</p>
 <div class="grid">
-<div class="card"><h3>GAU Admission Feedback System</h3><p>A Flutter kiosk app with an admin dashboard for collecting and reviewing feedback at the university admission office.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Admin dashboard</span></div></div>
 <div class="card"><h3>University Phone Directory</h3><p>A telephone directory management system for the reception desk, built with Flutter and Firebase.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span></div></div>
 <div class="card"><h3>NutriVerse</h3><p>An AI nutrition platform built with Flutter and Firebase.</p><div class="tags"><span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">AI</span></div></div>
 <div class="card"><h3>Remote Academic Management System</h3><p>A full stack system with role based authentication, student and project management, and reporting modules, built with PHP, MySQL, HTML, CSS, and JavaScript.</p><div class="tags"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span></div></div>
 <div class="card"><h3>Custom LMS and Ecommerce Platforms</h3><p>Full stack platforms with authentication, admin dashboards, and content management, built with PHP, WordPress, and MySQL.</p><div class="tags"><span class="tag">PHP</span><span class="tag">WordPress</span><span class="tag">MySQL</span></div></div>
-<div class="card"><h3>Company Website</h3><p>A professional website delivered for a private company, live at atmetalsltd.com.</p><div class="links"><a href="https://atmetalsltd.com" target="_blank" rel="noopener">Visit the site</a></div></div>
+<div class="card"><h3>Allah Tawaqal Metals ( Company Website )/h3><p>A professional website delivered for a private company, live at atmetalsltd.com.</p><div class="links"><a href="https://atmetalsltd.com" target="_blank" rel="noopener">Visit the site</a></div></div>
 </div>
 </section>
 
@@ -269,14 +275,8 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <div class="card"><h4>Languages</h4><div class="tags"><span class="tag">Dart</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">C and C++</span></div></div>
 <div class="card"><h4>Spoken</h4><div class="tags"><span class="tag">English</span><span class="tag">Urdu</span><span class="tag">Türkçe</span></div></div>
 </div>
-<h3 style="margin:30px 0 10px;color:var(--accent2)">Certifications</h3>
+<h3 style="margin:30px 0 10px;color:var(--accent2)">More certifications</h3>
 <ul class="cert">
-<li>Google IT Support Professional Specialization, Google</li>
-<li>Technical Support Fundamentals, Google</li>
-<li>The Bits and Bytes of Computer Networking, Google</li>
-<li>Operating Systems and You, Google</li>
-<li>System Administration and IT Infrastructure Services, Google</li>
-<li>IT Security: Defense Against the Digital Dark Arts, Google</li>
 <li>Introduction to Cybersecurity Tools and Cyber Attacks, IBM</li>
 <li>Cybersecurity Essentials, DefensityOne</li>
 <li>Cyber Threats and Attack Vectors, University of Colorado</li>
@@ -284,18 +284,61 @@ footer{border-top:1px solid var(--line);padding:30px 0;text-align:center;color:v
 <li>AI For Everyone, DeepLearning.AI</li>
 <li>Machine Learning for All, University of London</li>
 <li>Python Basics, University of Michigan</li>
-<li>Microsoft Office Specialist: Word and PowerPoint 2013</li>
-<li>Azure Fundamentals, Microsoft Learn Student Ambassador Program</li>
-<li>The Fundamentals of Digital Marketing, Google</li>
 <li>Freelancing and Graphic Design, DigiSkills.pk</li>
+<li>Coursera Administrator Training, Coursera</li>
 </ul>
+</section>
+
+<section id="credentials">
+<h2>Credentials</h2>
+<p class="sub">Microsoft and Google recognized training, plus community leadership.</p>
+<div class="grid">
+<div class="card cred">
+<h3>Microsoft Learn Student Ambassador</h3>
+<p class="meta">Microsoft | Beta MLSA</p>
+<ul>
+<li>First Microsoft Learn Student Ambassador from GCWUS and the Sialkot region</li>
+<li>Promoted to Beta MLSA and recognized internationally by Microsoft</li>
+<li>Organized and hosted the Azure Fundamentals and Virtual Machines workshop, covering hosting and deploying VMs on Microsoft Azure</li>
+<li>Contributed to developer community growth and cloud adoption</li>
+</ul>
+</div>
+<div class="card cred">
+<h3>Microsoft Office Specialist (MOS)</h3>
+<p class="meta">Microsoft | Dec 2018</p>
+<ul>
+<li>Microsoft Office Specialist: Word 2013 &nbsp;<code>wbxae-FMRo</code></li>
+<li>Microsoft Office Specialist: PowerPoint 2013 &nbsp;<code>XFzH-XLpk</code></li>
+<li>Azure Fundamentals, through the Microsoft Learn Student Ambassador program</li>
+</ul>
+</div>
+<div class="card cred">
+<h3>Google IT Support Professional</h3>
+<p class="meta">Google | May 2020</p>
+<ul>
+<li>Google IT Support Specialization &nbsp;<code>UYCHGWBRYWP2</code></li>
+<li>Technical Support Fundamentals &nbsp;<code>LNQPTVWD6CS2</code></li>
+<li>The Bits and Bytes of Computer Networking &nbsp;<code>L9PT5BUR4HTJ</code></li>
+<li>Operating Systems and You: Becoming a Power User &nbsp;<code>J2AJDLP6KVHV</code></li>
+<li>System Administration and IT Infrastructure Services &nbsp;<code>9GHJH5ARMD75</code></li>
+</ul>
+</div>
+<div class="card cred">
+<h3>More from Google</h3>
+<p class="meta">Google | 2020</p>
+<ul>
+<li>IT Security: Defense Against the Digital Dark Arts &nbsp;<code>MTYKANGBU8NL</code></li>
+<li>The Fundamentals of Digital Marketing &nbsp;<code>AH4 TQB 34A</code></li>
+</ul>
+</div>
+</div>
 </section>
 
 <section id="contact">
 <h2>Let's work together</h2>
 <p class="sub">Open to Flutter, full stack, and AI projects, and to new opportunities.</p>
 <div class="contact">
-<a class="btn primary" href="mailto:ayeshaarshad2899@gmail.com">ayeshaarshad2899@gmail.com</a>
+<a class="btn primary" href="mailto:teknoefsun@gmail.com">teknoefsun@gmail.com</a>
 <a class="btn" href="https://linkedin.com/in/aysecs11" target="_blank" rel="noopener">LinkedIn</a>
 <a class="btn" href="https://github.com/aysecs11" target="_blank" rel="noopener">GitHub</a>
 <a class="btn" href="https://play.google.com/store/apps/dev?id=7748182712237657139" target="_blank" rel="noopener">Google Play</a>
